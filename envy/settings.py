@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'envy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '../envy.db',
+        'NAME': 'envy.db',
     }
 }
 
@@ -99,4 +99,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '../static/'
+STATIC_ROOT = '/Users/clevernyyyy/develop/ember/envy/static'
+STATIC_URL = '/Users/clevernyyyy/develop/ember/envy/static/'
