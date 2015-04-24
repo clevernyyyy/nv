@@ -1,0 +1,34 @@
+/*******
+  NAV 
+*******/
+.navbar {
+  height: 25px;
+  background-color: green;
+}
+.navhead {
+  font-weight: bold;
+  color:white;
+}
+
+/*******
+  LOGIN
+********/
+.login {
+  border: 1px solid black;
+  height:100px;
+  width:200px;
+}
+.loginFields{
+  vertical-align: center;
+  text-align: center;
+  padding: 5px;
+  margin-top: 20px;
+}
+.loginButtons {
+  float:right;
+  margin-right: 25px;
+}
+.btnLogin {
+  background-color: green;
+  color:white;
+}

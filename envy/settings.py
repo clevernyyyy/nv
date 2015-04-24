@@ -50,7 +50,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'envyDev.urls'
+ROOT_URLCONF = 'envy.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'envy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/var/www/envy/envy.db',
+        'NAME': '../envy.db',
     }
 }
 
@@ -99,4 +99,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/var/www/envy/static/'
+STATIC_URL = '../static/'
