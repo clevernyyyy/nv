@@ -104,3 +104,12 @@ USE_TZ = True
 
 STATIC_ROOT = '/Users/clevernyyyy/develop/ember/envy/static'
 STATIC_URL = '/Users/clevernyyyy/develop/ember/envy/static/'
+
+REST_FRAMEWORK = {
+	'DEFAULT_AUTHENTICATION_CLASSES': (
+		'rest_framework.authentication.SessionAuthentication',
+	),
+	'DEFAULT_PERMISSION_CLASSES': (
+		'rest_framework.permissions.DjangoModelPermissions',
+	)
+}
