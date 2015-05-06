@@ -6,13 +6,17 @@ export default Ember.Component.extend({
     checkLogin: function() {
       var bool = false;
 
+      var name = username.value;
+      var pass = password.value;
+      console.log(name + ' ' + pass);
+
       //check here
 
-      if (bool ) {
+      if (bool) {
         alert("Worked");
       } else  {
-        alert("Didn't work");
+        alert("Didn't Work");
       }
-    }
+    }.observes('username', 'password')
   }
 });

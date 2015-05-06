@@ -6,6 +6,8 @@
   background-color: green;
 }
 .navhead {
+  margin-left: 25px;
+  font-size: xx-large;
   font-weight: bold;
   color:white;
 }
@@ -15,18 +17,22 @@
 ********/
 .login {
   border: 1px solid black;
-  height:100px;
-  width:200px;
+  height:140px;
+  width:380px;
 }
 .loginFields{
   vertical-align: center;
   text-align: center;
-  padding: 5px;
   margin-top: 20px;
+}
+.inputField {
+  min-width: 300px;
+  width:300px;
+  margin-bottom: 10px;
 }
 .loginButtons {
   float:right;
-  margin-right: 25px;
+  margin-right: 40px;
 }
 .btnLogin {
   background-color: green;
