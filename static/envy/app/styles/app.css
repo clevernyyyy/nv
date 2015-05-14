@@ -3,7 +3,7 @@
 *******/
 .navbar {
   height: 25px;
-  background-color: green;
+  background-color: #005500;  /* Gallup green */
 }
 .navhead {
   margin-left: 25px;
@@ -35,6 +35,6 @@
   margin-right: 40px;
 }
 .btnLogin {
-  background-color: green;
+  background-color: #66bd52;
   color:white;
 }

@@ -10,7 +10,11 @@ export default Ember.Component.extend({
       var pass = password.value;
       console.log(name + ' ' + pass);
 
-      //check here
+      //get Django working here
+      //var apiName = ?
+      //var apiPass = ?
+
+      bool = checkuser(name, pass, apiName, apiPass);
 
       if (bool) {
         alert("Worked");
@@ -18,5 +22,12 @@ export default Ember.Component.extend({
         alert("Didn't Work");
       }
     }.observes('username', 'password')
+  },
+  checkUser (name, pass, apiName, apiPass) {
+    if (name === apiName && pass === apiPass) {
+      return true;
+    } else {
+      return false;
+    }
   }
 });
