@@ -32,6 +32,34 @@ class PermissionViewSet(viewsets.ModelViewSet):
   queryset = Permission.objects.all()
   serializer_class = PermissionSerializer
 
+class LoginViewSet(viewsets.ModelViewSet):
+  def post(self, request, *args, **kwargs):
+     #try:
+       username = request.POST.get('username')
+       password = request.POST.get('password')
+       
+     #   code = InviteCode.objects.get(code = inviteCode)
+
+     #   if not code.used :          
+     #     user = User.objects.create_user(
+     #       first_name = request.POST.get('firstName'),
+     #       last_name = request.POST.get('lastName'),
+     #       email = request.POST.get('email'),
+     #       password = request.POST.get('password'),
+     #       username = request.POST.get('username'),
+     #       #zipCode = request.POST.get('zipCode')
+     #       )
+     #     user.is_staff = True
+     #     user.is_superuser = True
+     #     user.save()
+     #     code.used = True
+     #     code.save()
+     #     return Response({'valid': True, 'user_id': user.id})
+     #   return self.send_response(False, 'used')
+
+     # except InviteCode.DoesNotExist:
+     #   return self.send_response(False, 'invalid')
+
 # class ContentItemViewSet(viewsets.ModelViewSet):
 #   """
 #   API endpoint that allows content items to be viewed or edited.
