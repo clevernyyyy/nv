@@ -19,6 +19,7 @@ module.exports = function(environment) {
     }
   };
 
+
   if (environment === 'development') {
     ENV.APP.API_HOST = 'http://localhost:8000';
     // ENV.APP.LOG_RESOLVER = true;
@@ -26,6 +27,19 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    // config/environment.js
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' https://cdn.mxpnl.com", // Allow scripts from https://cdn.mxpnl.com
+      'font-src': "'self' 'unsafe-eval' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'connect-src': "'self' 'unsafe-eval' https://api.mixpanel.com http://custom-api.local", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'img-src': "'self' 'unsafe-eval'",
+      'style-src': "'self' 'unsafe-eval' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com 
+      'media-src': "'self' 'unsafe-eval'"
+    }
+
+
   }
 
   if (environment === 'test') {

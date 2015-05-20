@@ -20,6 +20,16 @@ class PermissionSerializer(serializers.HyperlinkedModelSerializer):
     model = Permission
     fields = ('url','name')
 
+# class PersonSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Person
+#         fields = ('id', 'username')
+
+class LoginSerializer(serializers.ModelSerializer):
+    class Meta:
+      model = Login
+      fields = ('id','username', 'password')
+      
 # class ContentItemSerializer(serializers.HyperlinkedModelSerializer):
 #   class Meta:
 #     model = ContentItem

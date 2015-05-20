@@ -11,7 +11,7 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'permissions', views.PermissionViewSet)
-router.register(r'login', views.LoginViewSet)
+router.register(r'logins', views.LoginViewSet)
 #router.register(r'contentitems', views.ContentItemViewSet)
 
 urlpatterns = [
@@ -26,5 +26,4 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     #EMBER
-    url(r'^login/', views.Login.as_view({'get':'list'})),
 ]

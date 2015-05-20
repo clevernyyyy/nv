@@ -33,11 +33,9 @@ class PermissionViewSet(viewsets.ModelViewSet):
   serializer_class = PermissionSerializer
 
 class LoginViewSet(viewsets.ModelViewSet):
-  def post(self, request, *args, **kwargs):
-     #try:
-       username = request.POST.get('username')
-       password = request.POST.get('password')
-       
+    queryset = Login.objects.all()
+    serializer_class = LoginSerializer
+
      #   code = InviteCode.objects.get(code = inviteCode)
 
      #   if not code.used :          
