@@ -26,9 +26,9 @@ export default Ember.Component.extend({
       bool = this.checkUser(name, pass, login);
 
       if (bool) {
-        alert("Worked");
+        this.transitionTo('demo');
       } else  {
-        alert("Didn't Work");
+        alert("Incorrect Username/Password");
       }
     }.observes('username', 'password')
   }

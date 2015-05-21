@@ -6,6 +6,6 @@ export default Ember.Controller.extend({
     var t = this;
     this.store.find('login').then(function(records){
       t.set('login',records);
-    })
+    });
   },
 });
