@@ -6,8 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  // Summary Page
-  this.route('summary');
+  // Login Page
+  this.route('login');
 
   // Scorecard
   this.resource('scorecard', function() {
