@@ -5,6 +5,24 @@
   
   {{outlet}}
 
+  <div class="unassigned">
+  {{#each todo in unassigned}}
+    <div class="cards">
+      <span class="todo_project">{{todo.project}}</span>
+      <button {{action 'assign' todo}} class="assign_btn"></button>
+      {{#link-to 'demo.todo' todo class='toggle_link'}}x{{/link-to}}
+      <span class="todo_status">{{todo.status}}</span>
+    </div>
+  {{/each}}
+  </div>
 
-  
+  <div class="assigned">
+  {{#each todo in assigned}}
+    <div class="cards">
+      <span class="todo_project">{{todo.project}}</span>
+      <span class="todo_status">{{todo.status}}</span>
+    </div>
+  {{/each}}
+  </div>
+
 </div>

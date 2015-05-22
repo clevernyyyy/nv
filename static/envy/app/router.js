@@ -26,7 +26,9 @@ Router.map(function() {
 
   // Any other route not found above
   this.route('error', {path: '/*path'});
-  this.route('demo');
+  this.route('demo', {path: '/data'}, function() {
+    this.route('todo', {path: '/todo/:todo_id'});
+  });
 });
 
 export default Router;
