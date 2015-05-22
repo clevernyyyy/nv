@@ -7,7 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   // Login Page
-  this.route('login');
+  this.route('login', {path: '/login'});
 
   // Scorecard
   this.resource('scorecard', function() {
