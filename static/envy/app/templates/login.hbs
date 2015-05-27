@@ -8,14 +8,14 @@
       <div class="login">
         <div id="fields" class="loginFields">
           <div id="usernameField">
-            <input type="text" class="inputField" id="username" placeholder="Username">
+            {{input class="inputField" type="text" value=username placeholder="Username"}}
           </div>
           <div id="passwordField">
-            <input type="password" class="inputField" id="password" placeholder="Password">
+            {{input class="inputField" type="password" value=password placeholder="Password"}}
           </div> 
         </div>
         <div id="loginButtons" class="loginButtons">
-          <button title="btnLogin" class="btnLogin" {{action 'checkLogin'}}>Login</button>
+          <button title="btnLogin" class="btnLogin" {{action 'checkLogin' this username password}}>Login</button>
         </div>
       </div>
     </div>

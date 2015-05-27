@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   login: null,
+
   init: function() {
     var t = this;
     this.store.find('login').then(function(records){
@@ -20,22 +21,19 @@ export default Ember.Controller.extend({
     }
   return ret;    
   },
-  actions: {
-    checkLogin: function() {
-      var bool = false;
 
+  actions: {
+    checkLogin: function(form, username, password) {
+      var bool = false;
       var login = this.get('login');
 
-      var name = username.value;
-      var pass = password.value;
-      
-      bool = this.checkUser(name, pass, login);
+      bool = this.checkUser(username, password, login);
 
       if (bool) {
         this.transitionTo('demo');
       } else  {
         alert("Incorrect Username/Password");
       }
-    }.observes('username', 'password')
+    }
   }
 });

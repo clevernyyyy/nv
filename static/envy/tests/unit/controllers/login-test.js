@@ -3,13 +3,22 @@ import {
   test
 } from 'ember-qunit';
 
-moduleFor('controller:login', {
+moduleFor('controller:login', 'LoginController', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['controller:login']
 });
 
-// Replace this with your real tests.
-test('it exists', function(assert) {
+
+test('working', function(assert) {
+  assert.expect(1);
+
   var controller = this.subject();
-  assert.ok(controller);
+
+  console.log(this);
+  var username = controller.get('username');
+  
+
+
+
+  assert.equal(username,'1');
 });
