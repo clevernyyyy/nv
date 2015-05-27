@@ -32,7 +32,10 @@ export default Ember.Controller.extend({
       if (bool) {
         this.transitionTo('demo');
       } else  {
-        alert("Incorrect Username/Password");
+        Ember.$("#loginError strong").text("Error!  A problem has occured while logging in, please try again.").show().parent().fadeIn().delay(2000).fadeOut('slow', function() {
+          Ember.$("#loginError strong").text("");
+        });
+
       }
     }
   }

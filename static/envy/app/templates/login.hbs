@@ -15,7 +15,13 @@
           </div> 
         </div>
         <div id="loginButtons" class="loginButtons">
-          <button title="btnLogin" class="btnLogin" {{action 'checkLogin' this username password}}>Login</button>
+          <button title="btnLogin" value="Login" class="btnLogin" {{action 'checkLogin' this username password}}>Login</button>
+        </div>
+      </div>
+      <div id="alert">
+        <div id="loginError" class="alert alert-danger" style="margin-top:15px; display:none;">
+          {{! <a href="#" class="close" data-dismiss="alert">&times;</a> }}
+          <strong></strong>
         </div>
       </div>
     </div>
