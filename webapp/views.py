@@ -7,6 +7,7 @@ from webapp.models import *
 
 #REST API
 from rest_framework import viewsets
+from rest_framework.views import APIView
 from webapp.serializers import *
 
 #Add in the following views beneath your existing views.
@@ -64,3 +65,40 @@ class LoginViewSet(viewsets.ModelViewSet):
 #   """
 #   queryset = ContentItem.objects.all()
 #   serializer_class = ContentItemSerializer
+class Session(APIView):
+    permission_classes = ()
+    error_messages = {
+        'invalid': "Invalid username or password",
+        'disabled': "Sorry, this account is suspended",
+    }
+
+    def send_error_response(self, message_key):
+        data = {
+            'success': False,
+            'message': self.error_messages[message_key],
+            'user_id': None,
+        }
+        return Response(data)
+
+    def get(self, request, *args, **kwargs):
+        # Get the current user
+        if request.user.is_authenticated():
+            return Response({'user_id': request.user.id})
+        return Response({'user_id': None})
+
+    def post(self, request, *args, **kwargs):
+        # Login
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return Response({'success': True, 'user_id': user.id})
+            return self.send_error_response('disabled')
+        return self.send_error_response('invalid')
+
+    def delete(self, request, *args, **kwargs):
+        # Logout
+        logout(request)
+        return Response(status=status.HTTP_204_NO_CONTENT)

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ["auth"],
   login: null,
 
   init: function() {
@@ -24,19 +25,21 @@ export default Ember.Controller.extend({
 
   actions: {
     checkLogin: function(form, username, password) {
-      var bool = false;
-      var login = this.get('login');
+      this.get("controllers.auth").send("login");
 
-      bool = this.checkUser(username, password, login);
+      //var bool = false;
+      //var login = this.get('login');
 
-      if (bool) {
-        this.transitionTo('demo');
-      } else  {
-        Ember.$("#loginError strong").text("Error!  A problem has occured while logging in, please try again.").show().parent().fadeIn().delay(2000).fadeOut('slow', function() {
-          Ember.$("#loginError strong").text("");
-        });
+      //bool = this.checkUser(username, password, login);
 
-      }
+      //if (bool) {
+        //this.transitionTo('demo');
+      //} else  {
+        //Ember.$("#loginError strong").text("Error!  A problem has occured while logging in, please try again.").show().parent().fadeIn().delay(2000).fadeOut('slow', function() {
+          //Ember.$("#loginError strong").text("");
+        //});
+
+      //}
     }
   }
 });
