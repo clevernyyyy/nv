@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import App from '../app.js';
+import App from '../app';
 
 export default Ember.Controller.extend({
     username: '',

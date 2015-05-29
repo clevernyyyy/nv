@@ -15,7 +15,7 @@ App = Ember.Application.extend({
 });
 
 //Define any global variables or functions here using the 'App' namespace
-App.api = "/api"
+App.api = "/api";
 App.debug = true;
 
 App.getLocal = function(name){
