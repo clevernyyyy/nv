@@ -14,6 +14,10 @@ App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+//Define any global variables or functions here using the 'App' namespace
+App.api = "/api"
+App.debug = true;
+
 App.getLocal = function(name){
 	return JSON.parse(localStorage.getItem(name));
 };

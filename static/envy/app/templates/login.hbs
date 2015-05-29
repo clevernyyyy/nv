@@ -8,10 +8,10 @@
       <div class="login">
         <div id="fields" class="loginFields">
           <div id="usernameField">
-            {{input class="inputField" type="text" value=username placeholder="Username"}}
+            {{input class="inputField" type="text" value=username placeholder="Username" valueBinding="controllers.auth.username"}}
           </div>
           <div id="passwordField">
-            {{input class="inputField" type="password" value=password placeholder="Password"}}
+            {{input class="inputField" type="password" value=password placeholder="Password" valueBinding="controllers.auth.password"}}
           </div> 
         </div>
         <div id="loginButtons" class="loginButtons">
