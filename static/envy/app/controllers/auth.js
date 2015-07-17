@@ -17,10 +17,6 @@ export default Ember.Controller.extend({
 		var password = this.get('password');
 		var remember = this.get('remember');
 
-    console.log('THIS: ', this);
-    console.log('USERNAME: ', username);
-    console.log('PASSWORD: ', password);
-
 		var formData = 'csrfmiddlewaretoken='+token+'&username='+this.get('username')+'&password='+this.get('password');
 		console.log(formData);
 		var url = 'http://localhost:8000/session/';
