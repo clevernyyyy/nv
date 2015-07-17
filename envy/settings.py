@@ -56,7 +56,7 @@ ROOT_URLCONF = 'envy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/clevernyyyy/develop/ember/envy/static/deploy/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,8 +100,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = '/Users/clevernyyyy/develop/ember/envy/static'
-STATIC_URL = '/Users/clevernyyyy/develop/ember/envy/static/'
+STATICFILES_DIRS = (os.path.join('static'), )
+#STATIC_ROOT = '/Users/clevernyyyy/develop/ember/envy/static/'
+STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
 	'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -110,7 +111,7 @@ REST_FRAMEWORK = {
 	'DEFAULT_PERMISSION_CLASSES': (
 	'rest_framework.permissions.DjangoModelPermissions',
         'webapp.api_settings.CustomDjangoModelPermissions',
-        #'webapp.api_settings.AllowAny',
+        'webapp.api_settings.AllowAny',
 	)
 }
 

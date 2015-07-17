@@ -1,29 +1,72 @@
-<div class="container">
-  <div class="page-header">
-    <h1 id="title">Welcome to <span class="greenFont">gSRSLY<sup>&copy;</sup></span> Demo</h1>
-  </div>
-  
-  <div class="row">
-    <div class="container col-md-6">
-      <div class="login">
-        <div id="fields" class="loginFields">
-          <div id="usernameField">
-            {{input class="inputField" type="text" value=username placeholder="Username" valueBinding="controllers.auth.username"}}
-          </div>
-          <div id="passwordField">
-            {{input class="inputField" type="password" value=password placeholder="Password" valueBinding="controllers.auth.password"}}
-          </div> 
-        </div>
-        <div id="loginButtons" class="loginButtons">
-          <button title="btnLogin" value="Login" class="btnLogin" {{action 'checkLogin' this username password}}>Login</button>
-        </div>
+{{!-- TODO - Make page pretty --}}
+{{!-- TODO - Make sure error messages work, I don't think they are right now --}}
+
+{{#if errorMsg}}
+  <div id="login" class="loginBox">
+    <div id="title">
+      <h4>Login for Access</h4>
+    </div>
+    <form class="form-inline">
+      <div class="form-group has-error">
+        {{input class="form-control inputBox" type="text" value=username placeholder="Username" valueBinding="controllers.auth.username"}}
       </div>
-      <div id="alert">
-        <div id="loginError" class="alert alert-danger" style="margin-top:15px; display:none;">
-          {{! <a href="#" class="close" data-dismiss="alert">&times;</a> }}
-          <strong></strong>
+      <br>
+      <div class="form-group has-error" style="margin-top:5px;">
+        {{input class="form-control inputBox" type="password" value=password placeholder="Password" valueBinding="controllers.auth.password"}}
+      </div>
+      <br>
+      <label class="control-label">
+        <div class="alert alert-danger" style="padding:5px; margin-bottom:0px;" role="alert">
+          {{errorMsg}}
         </div>
+      </label>
+      <br>
+      <label class="checkbox" style="margin-top:10px;">
+        {{input type="checkbox" checkedBinding="remember"}} Remember me
+      </label>
+      <button type="button"  style="margin-top:5px; margin-left:10px;" class="btn btn-default" {{action 'login'}}>Sign in</button>
+    </form>
+  </div>
+{{else}}
+  <div id="pageMap" class="container">
+    <div id="logo">
+      <img src="../../../static/envy/img/envy_2.png" style="display:block; margin:auto; width:150px;"/>
+      <h4><p class="highlightWords">A new type of social networth.</p></h4>
+    </div>
+    <div id="loginBox" class="registerLeft">  
+      <div id="login" class="loginBox" style="background-color:white;">
+        <div id="title">
+          <h4>Login for Access</h4>
+        </div>
+        <form class="form-inline">
+          <div class="form-group">
+            {{input class="form-control inputBox" type="text" value=username placeholder="Username" valueBinding="controllers.auth.username"}}
+          </div>
+          <br>
+          <div class="form-group" style="margin-top:5px;">
+            {{input class="form-control inputBox" type="password" value=password placeholder="Password" valueBinding="controllers.auth.password"}}
+          </div>
+          <br>
+          <label class="checkbox" style="margin-top:10px;">
+            {{input type="checkbox" checkedBinding="remember"}} Remember me
+          </label>
+          <button type="button" style="margin-top:5px; margin-left:10px;" class="btn btn-default" {{action 'login' username password}}>Sign in</button>
+          <br>
+        </form>
       </div>
     </div>
+    <div id="loginInfo" class="registerRight" style="margin-top:-15px;">
+      <span id="headerInfo" class="">
+        <h2>Envy is <span class="highlightWords">free</span>, <span class="highlightWords">secure</span>, and as <span class="highlightWords">private</span> as you want it to be.</h2>
+          {{!-- <br /> --}}
+          <h2>What makes Envy <span class="highlightWords">different</span> than other social networks?</h2>
+          <ul>
+            <li><h3><span class="highlightWords">No fake</span> news feed <span class="highlightWords">posts.</span>  Everything you see if from your friends or other Envy users.</h3></li>
+            {{!-- The more friends you have the less likely you'll see other Envy users --}}
+            <li><h3>We will <span class="highlightWords">never</span> sell your information.  Never.</h3></li>
+            <li><h3>Our <span class="highlightWords">privacy</span> settings are <span class="highlightWords">top-notch</span>.</h3></li>
+          </ul>
+      </span>
+    </div>
   </div>
-</div>
+{{/if}}

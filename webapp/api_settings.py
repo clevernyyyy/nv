@@ -11,13 +11,13 @@ class CustomDjangoModelPermissions (DjangoModelPermissions):
     'DELETE': ['%(app_label)s.delete_%(model_name)s'],
   }
 
-#class AllowAny (DjangoModelPermissions):
- # perms_map = {
-  #  'GET': [],
-   # 'OPTIONS': [],
-   # 'HEAD': [],
-   # 'POST': [],
-   # 'PUT': [],
-   # 'PATCH': [],
-   # 'DELETE': [],
- # }
+class AllowAny (DjangoModelPermissions):
+ perms_map = {
+   'GET': [],
+   'OPTIONS': [],
+   'HEAD': [],
+   'POST': [],
+   'PUT': [],
+   'PATCH': [],
+   'DELETE': [],
+ }

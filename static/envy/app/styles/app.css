@@ -1,46 +1,292 @@
-/*******
-  NAV 
-*******/
-.navbar {
-  height: 25px;
-  background-color: #005500;  /* Gallup green */
+/*TODO - break into separate, logical css files that contain similar sections*/
+
+/************************************************************** name */
+.envy {
+  color: #5b9c46;
+  font-family: monospace;
+  font-weight: bolder;
+  text-shadow:1px 0px 2px #6fae5b,
+        -1px 0px 2px #6fae5b;
 }
-.navhead {
-  margin-left: 25px;
-  font-size: xx-large;
-  font-weight: bold;
-  color:white;
+.envy:hover{
+  text-decoration: none;
+  color: rgb(121, 197 ,114);
 }
 
-/*******
-  LOGIN
-********/
-.login {
-  border: 1px solid black;
-  height:140px;
-  width:380px;
+/************************************************************** login */
+.loginBox {
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px 10px 10px 20px;
+  border-radius: 10px;
+  border-color:#d3d3d3;
+  max-width: 240px;
+  margin-top: 10px;
+/*  margin-left: auto;
+  margin-right: auto;*/
 }
-.loginFields{
-  vertical-align: center;
+
+/************************************************************** sidebar */
+.mainContent {
+  /*border-left: 2px solid #d3d3d3;*/
+  min-height: 100%;
+}
+
+.sidebarMain {
+  /*background-color: #f1f1f1;*/
+}
+
+.profilePicture {
+  margin-top: 10px;
+  width:75px; 
+  height:75px; 
+  border: 1px solid #d3d3d3;
+}
+
+.sidebarHeader {
+  color:forestgreen;
+}
+.sidebarLinks {
+  color:darkgray;
+  font-weight: bold;
+  padding: 5px 5px 3px 5px;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  display:block;
+}
+.sidebarLinks:hover {
+  text-decoration: none;
+  background-color: #e4e4e4;
+}
+
+
+/************************************************************** feed */
+.feedling {
+  margin-top: 15px;
+  border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border: 0px solid #000000;
+  min-height: 60px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+.feedlingComments {
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  border: 0px solid #000000;
+  min-height: 60px;
+  width: 100%;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+.feedlingInteraction {
+  border-radius: 0px 0px 0px 0px;
+  -moz-border-radius: 0px 0px 0px 0px;
+  -webkit-border-radius: 0px 0px 0px 0px;
+  border: 0px solid #000000;
+  min-height: 20px;
+  width: 100%;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+.feedlingArea {
+  padding: 15px 15px 15px 15px; 
+}
+
+.userContentText {
+  font-size: 16px;
+  margin-top:3px;
+  display:block;
+}
+
+.itemDetails {
+  display:block;
+}
+
+/************************************************************** rightbar */
+.rightbar {
+  margin-top: 15px;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+  min-height: 60px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+
+.rightbar h1 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1em;
+  color:forestgreen;
+  padding: 5px 5px 3px 5px;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  margin-bottom: 0px !important;
+}
+
+
+/************************************************************** navbar */
+/* this helps justify everything into the center of the navbar *********/
+@media (min-width: 768px){
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
+}
+
+.navcss {
+  /* 25th and 15th prime numbers */
+  background-color: rgb(0, 97, 47) !important; 
+}
+
+.navtext {
+  color: white !important;
+  margin-top: 3px !important;
+}
+.navtext:hover {
+  color: #5b9c46 !important;
+}
+
+/************************************************************** footer */
+.foot {
+  width:100%;
+  min-height: 40px;
+  background-color: #F0F0F0;
   text-align: center;
-  margin-top: 20px;
+  vertical-align: middle;
+  line-height: 40px;       /* the same as your div height */
 }
-.inputField {
-  min-width: 300px;
-  width:300px;
-  margin-bottom: 10px;
+
+
+/************************************************************** modals */
+.modal-content {
+  width:350px !important;
 }
-.loginButtons {
+
+
+/************************************************************** update */
+.update {
+  margin-top: 15px;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+  min-height: 60px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+.updateHeader {
+  font-weight: bold;
+  color:forestgreen;
+  padding: 5px 5px 4px 5px;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+}
+.updateHeader:hover {
+  text-decoration: none;
+  color:forestgreen;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+.updateFooter {
+  border-radius: 0px 0px 5px 5px;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+  border: 0px solid #000000;
+  min-height: 40px;
+  width: 100%;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+}
+.updateFooterBox {
+  font-weight: bold;
+  color:forestgreen;
+  padding: 7px 5px 8px 3px;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+}
+.updateFooterBox:hover {
+  text-decoration: none;
+  color:forestgreen;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+
+/************************************************************** register */
+.registerRight{
+  display: inline-block;
   float:right;
-  margin-right: 40px;
+  height: 600px;
+  width:50%;
 }
-.btnLogin {
-  background-color: #66bd52;
-  color:white;
+.registerLeft{
+  display: inline-block;
+  float:left;
+  height: 600px;
+  width:50%;
 }
-.greenFont {
-  color: #66bd52;
+.highlightWords{
+  display:inline-block;
+  color:forestgreen;
+  font-weight: bold;
 }
+
+
+/************************************************************** background */
+.ember-application {
+  background-color: #F0F0F0 !important;
+}
+
+
+
+
+
+
+/* TODO - break out the below section into another css file*/
+/************************************************************** general formatting */
+.inputBox {
+  background-color: #F0F0F0 !important; 
+}
+
+.registerNames {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 7px 7px 7px 7px;
+  margin-bottom: 5px;
+  width: 200px;
+}
+
+.registerFields {
+  display:block;
+  width: 413px;
+  padding: 7px 7px 7px 7px;
+  margin-bottom: 5px;
 
 
 /*******

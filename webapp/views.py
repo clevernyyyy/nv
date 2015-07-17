@@ -1,15 +1,16 @@
 # Import models
-
 from django.shortcuts import render
 from django.db import models
 from django.contrib.auth.models import *
 from webapp.models import *
+from django.contrib.auth import *
 
 #REST API
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from webapp.serializers import *
 from rest_framework.response import Response
+from rest_framework.permissions import *
 
 #Add in the following views beneath your existing views.
 #ViewSets for REST API
@@ -67,7 +68,7 @@ class LoginViewSet(viewsets.ModelViewSet):
 #   queryset = ContentItem.objects.all()
 #   serializer_class = ContentItemSerializer
 class Session(APIView):
-    permission_classes = ()
+    permission_classes = (AllowAny,)
     error_messages = {
         'invalid': "Invalid username or password",
         'disabled': "Sorry, this account is suspended",
