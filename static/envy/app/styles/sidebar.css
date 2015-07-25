@@ -1,0 +1,22 @@
+
+.sidebarHeader {
+	color:forestgreen;
+}
+.sidebarLinks {
+	color:darkgray;
+	font-weight: bold;
+	padding: 5px 5px 3px 5px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	display:block;
+}
+.sidebarLinks:hover {
+	text-decoration: none;
+	background-color: #e4e4e4;
+}
+
+
+.sidebarMain {
+	/*background-color: #f1f1f1;*/
+}

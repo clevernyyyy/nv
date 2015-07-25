@@ -45,7 +45,7 @@ export default Ember.Controller.extend({
 					App.setLocal('password',password);
 					App.setLocal('remember',true);
 				}
-				controllerObj.transitionToRoute('/demo');  //change to feed
+				controllerObj.transitionToRoute('/feed');  //change to feed
 			}
 		})
 		.fail(function(){

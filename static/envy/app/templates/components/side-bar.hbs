@@ -1,1 +1,41 @@
-{{yield}}
+{{! Render sidebar profile }}
+<div id="sidebarProfile" style="margin-top: 5px;">
+  {{side-profile}}
+</div>
+
+{{! Render sidebar hotlinks }}
+<div id="sidebar" style="margin-top:15px;">
+  <div id="hotlinks">
+    <div id="hotlinks-header">
+      <span class="sidebarHeader">HOTLINKS</span>
+    </div>
+
+    {{! TODO - make icons for each of these }}
+    <a class="sidebarLinks">Envy Feed</a>
+    <a class="sidebarLinks">Messages</a>   {{! TODO - make alert for unread messages }}
+    <a class="sidebarLinks">Items</a>
+  </div>
+
+  {{! TODO - make the stuff below each of these headings dynamic, filled in according to personal profile }}
+  <div id="groups">
+    <div id="groupsHeader">
+      <span class="sidebarHeader">GROUPS</span>
+    </div>
+    <a class="sidebarLinks">Omaha Electronics</a>
+    <a class="sidebarLinks">Apple Fans</a>
+  </div>
+  <div id="following">
+    <div id="followingHeader">
+      <span class="sidebarHeader">FOLLOWING</span>
+    </div>
+    <a class="sidebarLinks">Johnny Depp</a>
+    <a class="sidebarLinks">Bill Gates</a>
+  </div>
+  <div id="pages">
+    <div id="pagesHeader">
+      <span class="sidebarHeader">PAGES</span>
+    </div>
+    <a class="sidebarLinks">University of Nebraska at Omaha</a>
+    <a class="sidebarLinks">Green Bay Packers</a>
+  </div>
+</div>

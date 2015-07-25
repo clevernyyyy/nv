@@ -28,7 +28,7 @@ Router.map(function() {
 
   // Any other route not found above
   this.route('error', {path: '/*path'});
-  this.route('demo', {path: '/demo'});
+  this.route('feed', {path: '/feed'});
 });
 
 export default Router;

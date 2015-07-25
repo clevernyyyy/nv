@@ -1,1 +1,57 @@
-{{yield}}
+<div id="feedling">
+  <div id="feedlingContent" class="feedling">
+    <a href="#/profile">
+      <div id="profilePicture" style="display:inline-block; min-width:40px; min-height:40px; background-color:black;">
+        <img alt=""/>
+      </div>
+    </a>
+    <div id="profileName" style="display:inline-block; vertical-align:top;">
+      <a href="#/profile" style="color:forestgreen; font-weight:bold; font-size:1.2em;">
+        {{! {{controllers.auth.username}}
+      </a>
+      <span style="color:#7e7e7e; font-size:0.9em; display:block; margin-top:-2px;">Time Stamp</span>
+    </div>
+    <div id="userContent">
+    </div>
+    <div id="itemContent">
+      <div id="itemImage">
+      </div>
+      <div id="itemDetails">
+      </div>
+    </div>
+  </div>
+  <div id="feedlingInteraction" class="feedlingInteraction">
+    <div id="feedlingMiddle" class="feedlingArea">
+      <div id="jellyButton" style="display:inline-block; vertical-align:top">
+        {{!-- {{bs-button type="success" title="Covet" clicked="covet"}}
+      </div> 
+      <div id="jellyStats" style="display:inline-block; vertical-align:top; margin-left:20px; margin-top:-5px;">
+        <span>X people are jealous!<span>
+        <br/>
+        <span style="vertical-align:top;">Some of your friends who are jealous:</span>
+        {{!-- TODO - replace with real friend pictures --}}
+        <div id="jellyFriendList" style="display:inline-block;">
+          <div id="profilePicture" style="display:inline-block; min-width:15px; min-height:20px; background-color:black;">
+          </div>  
+          <div id="profilePicture" style="display:inline-block; min-width:15px; min-height:20px; background-color:black;">
+          </div>  
+          <div id="profilePicture" style="display:inline-block; min-width:15px; min-height:20px; background-color:black;">
+          </div>  
+          <div id="profilePicture" style="display:inline-block; min-width:15px; min-height:20px; background-color:black;">
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="feedlingComments" class="feedlingComments">
+    <div id="feedlingBottom" class="feedlingArea">
+      <div id="profilePicture" style="display:inline-block; min-width:40px; min-height:40px; background-color:black;">
+      </div>  
+      <span id="commentBox" style="display:inline-block; vertical-align:top; margin-left:10px; margin-top:3px;">
+        {{input class="form-control" valueBinding="commentBox" action="comment" placeholder="Write a comment"}}
+      </span>
+      <br />
+      <span>Item ID: {{item.id}}</span>
+    </div>
+  </div>
+</div>
